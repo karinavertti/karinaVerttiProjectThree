@@ -33,10 +33,17 @@ header {
     // margin: 0 auto;
 }
 
-h1{
+h1, h4{
     font-family: $baseFont;
     font-size: calc(1.8rem + 1.8vw);
     // text-align: center;
     font-weight: lighter;
     padding-top: 24px;
+}
+
+.placeholderImg {
+    background-color: pink;
+    height: 400px;
+    width: 400px;
+
 }

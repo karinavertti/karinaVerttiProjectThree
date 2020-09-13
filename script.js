@@ -1,32 +1,39 @@
 // Create a babies object with 2 arrays:
-// 1) fur-babies  2) human-babies
+// 1) pet  2) human
 const babies = {
     pet: [
         {
             name: 'Coco',
-            url: 'assets/coco.jpg'
+            url: 'assets/coco.jpg',
+            about: 'She runs faster than a race car',
+            alt: 'need to write'
         },
         {
             name: 'Chiki',
-            url: 'assets/chiki.jpg'
+            url: 'assets/chiki.jpg',
+            about: 'Loves to camouflage on dark backgrounds'
         },
         {
             name: 'Nacho',
-            url: 'assets/nacho.jpg'
+            url: 'assets/nacho.jpg',
+            about: 'Will eat your shoes while you walk'
         }
     ],
     human: [
         {
             name: 'Gabo',
-            url: 'assets/gabo.jpg'
+            url: 'assets/gabo.jpg',
+            about: 'Battery-life: forever in unstoppable loops'
         },
         {
             name: 'Dani',
-            url: 'assets/dani.jpg'
+            url: 'assets/dani.jpg',
+            about: 'He screams louder than a parrot'
         },
         {
             name: 'Grandma',
-            url: 'assets/grandma.jpg'
+            url: 'assets/grandma.jpg',
+            about: 'Will not move unless she watched a CSI episode'
         }
     ]
 };
@@ -34,53 +41,45 @@ const babies = {
 // Create a namespace:
 const babyApp = {};
 
-function randomBaby(array) {
+// Declare a function that will return a random item from any array
+function randomSubject(array) {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
 }
+
+// Error handling, ensure user has selected something before allowing them to submit
+$('input[type="radio"]').on('change', function() {
+    $('input[type="submit"]').prop('disabled', false);
+});
 
 // Create an event listener for a 'submit' event in the form
 $('form').on('submit', function (e) {
     e.preventDefault();
 
-    // Save information from checked radio buttons into variables
+    // Save information from checked radio buttons into a variable
     const accomplice = $('input[name=baby]:checked').val();
-    const petArray = babies.pet
-    const humanArray = babies.human
 
-    if (accomplice === "furBaby") {
-        const toDisplay = randomBaby(petArray);
+    // Determine what the user's choice correspond to from the babies object
+    if (accomplice) {
+        // Display the baby-of-the-day name & photo on the page
+        // Use bracket notation to detect the input value from the radio button 
+        const toDisplay = randomSubject(babies[accomplice]);
         $('.results').html(`
         <p class="choice">${toDisplay.name}</p>
         <img src="${toDisplay.url}">
         `);
-    } else {
-        const toDisplay = randomBaby(humanArray);
-        $('.results').html(`
-        <p class="choice">${toDisplay.name}</p>
-        <img src="${toDisplay.url}">
+        // Display a piece of advice corresponding to the selected baby
+        $('.funFact').html(`
+        <p class="advise">${toDisplay.about}</p>
         `);
+    
     }
-
-    console.log(accomplice);
+    
 });
-// Error handling, ensure user has selected something before allowing them to submit
-
-
-
-// Determine what the user's choice correspond to from the babies object
-// let accomplice = $(this).find('input:checked').val();
-// const accomplice = [];
-// We need to randomly select a baby-of-the-day
-
-// Declare a function that will return a random item from any array
-
-// Display the baby-of-the-day photo on the page
 
 // Create init function that will kick off the app:
 babyApp.init = () => {
-    // babyApp.getResults();
-    console.log('I work!');
+
 }
 // Create document ready:
 $(document).ready(function () {
@@ -89,6 +88,5 @@ $(document).ready(function () {
 
 
 // Stretch goals:
-// Display a piece of advice corresponding to the selected baby
 // Turn the baby-of-the-day photo into a baby-gallery with a couple of more photos 
 // Reset radio buttons/allow user to start again

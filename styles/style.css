@@ -301,9 +301,15 @@ header {
   width: 40%;
 }
 
-h1 {
+h1, h4 {
   font-family: "Gayathri", sans-serif;
   font-size: calc(1.8rem + 1.8vw);
   font-weight: lighter;
   padding-top: 24px;
+}
+
+.placeholderImg {
+  background-color: pink;
+  height: 400px;
+  width: 400px;
 }
