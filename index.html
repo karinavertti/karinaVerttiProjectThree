@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectThree</title>
+
+    <!-- link to google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <!-- link to fontawesome -->
+    <script src="https://kit.fontawesome.com/9df38b747b.js" crossorigin="anonymous"></script>
+
+    <!-- link to styles -->
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+
+<body>
+
+    <header class="wrapper" class="flexHeader">
+        <section class="logo">
+            <img src="./assets/heart.png" alt="logo of a pink heart with 'Help this mom' written on top">
+        </section>
+
+        <h1>Volunteer Portal</h1>
+
+    </header>
+
+    <main class="wrapper">
+
+        <h2>Thank you for showing up my friend!</h2>
+
+
+		<form class="babyType" action="">
+
+			<!-- <fieldset class="babyType"> -->
+                <p>Who would you rather babysit for me today?</p>
+                
+				<label for="furBaby">Fur-baby</label>
+                <input type="radio" name="baby" id="furBaby" value="furBaby">
+                
+				<label for="humanBaby">Human-baby</label>
+                <input type="radio" name="baby" id="humanBaby" value="humanBaby">
+                
+                <div class="submit-container">
+					<input type="submit" value="Show me my partner in crime!">
+				</div>
+            <!-- </fieldset>	 -->
+            
+        </form>
+        
+		<section class="results">
+
+            <h3>Your accomplice for the day is:</h3>
+
+
+        </section>
+        
+    </main>
+    
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+	<script src="script.js"></script>
+
+
+</body>
+
+</html>

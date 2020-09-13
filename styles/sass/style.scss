@@ -1,0 +1,42 @@
+@import "setup";
+
+
+$headingFont: 'Shadows Into Light', cursive;
+$baseFont: 'Gayathri', sans-serif;
+
+
+// $primary: #2C2C2C;
+// $highlight: #F8E71C;
+// $buttonColor: #0E902D;
+
+
+// **************************************************** //
+// HEADER & NAVIGATION STYLES
+// **************************************************** //
+body {
+    background-image: linear-gradient(to bottom right, #ffffff, #e1fbff);
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* background: #e1fbff; */
+}
+
+.flexHeader {
+    display: flex;
+}
+
+header {
+    padding-top: 60px;
+}
+
+.logo {
+    width: 40%;
+    // margin: 0 auto;
+}
+
+h1{
+    font-family: $baseFont;
+    font-size: calc(1.8rem + 1.8vw);
+    // text-align: center;
+    font-weight: lighter;
+    padding-top: 24px;
+}
