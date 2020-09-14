@@ -6,34 +6,39 @@ const babies = {
             name: 'Coco',
             url: 'assets/coco.jpg',
             about: 'She runs faster than a race car',
-            alt: 'need to write'
+            alt: 'cute white and brindle Whippet puppy'
         },
         {
             name: 'Chiki',
             url: 'assets/chiki.jpg',
-            about: 'Loves to camouflage on dark backgrounds'
+            about: 'Loves to camouflage on dark backgrounds',
+            alt: 'adorable black mini Chihuahua doggie'
         },
         {
             name: 'Nacho',
             url: 'assets/nacho.jpg',
-            about: 'Will eat your shoes while you walk'
+            about: 'Will eat your shoes while you walk',
+            alt: 'white Bull Terrier pup'
         }
     ],
     human: [
         {
             name: 'Gabo',
             url: 'assets/gabo.jpg',
-            about: 'Battery-life: forever in unstoppable loops'
+            about: 'Battery-life: forever in unstoppable loops',
+            alt: '5 year old boy sitting through the sunroof of a car laughing'
         },
         {
             name: 'Dani',
             url: 'assets/dani.jpg',
-            about: 'He screams louder than a parrot'
+            about: 'He screams louder than a parrot',
+            alt: '7 month old baby boy making a funny face'
         },
         {
             name: 'Grandma',
             url: 'assets/grandma.jpg',
-            about: 'Will not move unless she watched a CSI episode'
+            about: 'Will not move unless she watched a CSI episode',
+            alt: 'portrait of a grandmother smiling'
         }
     ]
 };
@@ -66,7 +71,7 @@ $('form').on('submit', function (e) {
         const toDisplay = randomSubject(babies[accomplice]);
         $('.results').html(`
         <p class="choice">${toDisplay.name}</p>
-        <img src="${toDisplay.url}">
+        <img src="${toDisplay.url}" alt="${toDisplay.alt}">
         `);
         // Display a piece of advice corresponding to the selected baby
         $('.funFact').html(`
@@ -77,6 +82,14 @@ $('form').on('submit', function (e) {
     
 });
 
+// Reset radio buttons/allow user to start again
+// $('.reStart').on('click', function (e) {
+//     e.preventDefault();
+//     location.reload(true);
+
+// }
+
+
 // Create init function that will kick off the app:
 babyApp.init = () => {
 
@@ -86,7 +99,5 @@ $(document).ready(function () {
     babyApp.init();
 })
 
-
 // Stretch goals:
 // Turn the baby-of-the-day photo into a baby-gallery with a couple of more photos 
-// Reset radio buttons/allow user to start again

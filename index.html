@@ -7,7 +7,9 @@
     <title>ProjectThree</title>
 
     <!-- link to google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
 
     <!-- link to fontawesome -->
     <script src="https://kit.fontawesome.com/9df38b747b.js" crossorigin="anonymous"></script>
@@ -19,56 +21,81 @@
 
 <body>
 
-    <header class="wrapper" class="flexHeader">
-        <section class="logo">
-            <img src="./assets/heart.png" alt="logo of a pink heart with 'Help this mom' written on top">
-        </section>
+    <header class="wrapper">
 
-        <h1>Volunteer Portal</h1>
+        <section class="flexHeader">
+            <div class="logo">
+                <img src="./assets/heart.png" alt="logo of a pink heart with 'Help this mom' written on top">
+            </div>
+
+            <h1>Volunteer Portal</h1>
+        </section>
 
     </header>
 
     <main class="wrapper">
 
-        <h2>Thank you for showing up my friend!</h2>
+        <h2><em>Thank you</em> for showing up my friend!</h2>
 
 
-		<form class="babyType" action="">
+        <form class="babyType" action="">
 
-			<!-- <fieldset class="babyType"> -->
-                <p>Who would you rather babysit for me today?</p>
-                
-				<label for="furBaby">Fur-baby</label>
-                <input type="radio" name="baby" id="furBaby" value="pet">
-                
-				<label for="humanBaby">Human-baby</label>
-                <input type="radio" name="baby" id="humanBaby" value="human">
-                
-                <div class="submit-container">
-					<input type="submit" value="Show me my partner in crime!" disabled>
-				</div>
-            <!-- </fieldset>	 -->
-            
+
+            <p>Who would you rather babysit for me today?</p>
+
+            <div class="options">
+
+                <div class="first">
+                    <input type="radio" name="baby" id="furBaby" value="pet">
+                    <label for="furBaby">Fur-baby</label>
+                </div>
+
+                <div class="second">
+                    <input type="radio" name="baby" id="humanBaby" value="human">
+                    <label for="humanBaby">Human-baby</label>
+                </div>
+
+            </div>
+
+            <div class="submitContainer">
+                <input type="submit" value="Show me my partner in crime!" disabled>
+            </div>
+
+
         </form>
-        
-        <h3>Your accomplice for the day is:</h3>
-		<section class="results">
 
-            <div class="placeholderImg"></div>
+        <h3>Your accomplice for the day is:</h3>
+
+
+        <section class="results">
+
+            <p>^^ ^^</p>
+            <img src="./assets/question.jpg" alt="white question mark on a soft pink background">
 
         </section>
 
         <h4>What you need to know:</h4>
+
         <section class="funFact">
-
-
+            <p>...</p>
 
         </section>
-        
+
+        <!-- <button class="reStart">Start all over again!</button> -->
+
     </main>
-    
-    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-	<script src="script.js"></script>
+
+    <!-- footer -->
+    <footer>
+
+        <p>Copyright © 2020 Karina Vertti | <a href="https://junocollege.com/" target="blank">Created at Juno
+                College</a></p>
+
+    </footer>
+
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js'
+        integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="script.js"></script>
 
 
 </body>

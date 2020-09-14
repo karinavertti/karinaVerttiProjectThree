@@ -7,25 +7,29 @@ $baseFont: 'Gayathri', sans-serif;
 
 // $primary: #2C2C2C;
 // $highlight: #F8E71C;
-// $buttonColor: #0E902D;
+$highlight: #89CFF0;
+$shadows:#d3d3d3;
 
-
-// **************************************************** //
-// HEADER & NAVIGATION STYLES
-// **************************************************** //
+// ************************* //
+// HEADER STYLES
+// ************************* //
 body {
     background-image: linear-gradient(to bottom right, #ffffff, #e1fbff);
     background-repeat: no-repeat;
-    height: 100vh;
+    // height: 100vh;
     /* background: #e1fbff; */
 }
 
 .flexHeader {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+
 }
 
 header {
     padding-top: 60px;
+    height: 50vh;
 }
 
 .logo {
@@ -33,17 +37,140 @@ header {
     // margin: 0 auto;
 }
 
-h1, h4{
-    font-family: $baseFont;
-    font-size: calc(1.8rem + 1.8vw);
-    // text-align: center;
-    font-weight: lighter;
+h1{
+    // width: 60%;
+    font-family: $headingFont;
+    font-size: calc(3.5rem + 3.5vw);
     padding-top: 24px;
 }
 
-.placeholderImg {
-    background-color: pink;
-    height: 400px;
-    width: 400px;
+// ************************* //
+// MAIN STYLES
+// ************************* //
 
+h2 {
+    font-size: calc(1.7rem + 1.7vw);
+    text-align: center;
+    em {
+        font-weight: bold;
+    }
+}
+
+
+
+// ************************* //
+// FORM STYLES
+// ************************* //
+.babyType {
+    padding-top: 30px;
+    text-align: center;
+    p {
+        padding-bottom: 30px;
+    }
+}
+
+    .options {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+
+    }
+
+    .first,
+    .second {
+        font-family: $headingFont;
+        font-size: calc(1.6rem + 1.6vw);
+        display: flex;
+        padding-right: 15px;
+            label {
+                padding-left: 10px;
+                }
+    }
+
+    .second {
+        padding-left: 15px;
+    }
+
+
+    .submitContainer {
+        padding-bottom: 100px;
+        input {
+            border-style: none;
+            background-color: $highlight;
+            color: #FFF;
+            font-family: $baseFont;
+	        font-size: calc(1.2rem + 1.2vw);
+            padding: 10px 18px 0px 18px;
+            border-radius: 10px;
+            box-shadow: 2px 3px $shadows;
+        }
+        input:hover,
+        input:focus {
+            color: #000;
+        }
+
+        input:disabled {
+            opacity: 0.2;
+            background-color: $shadows;
+        }
+    }
+// ************************* //
+// RESULTS STYLES
+// ************************* //
+h3,
+h4 {
+    text-align: center;
+    padding-bottom: 30px;
+
+}
+
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+    p {
+        font-family: $headingFont;
+        font-weight: bold;
+        color: $highlight;
+        font-size: calc(2.6rem + 2.6vw);
+        padding-bottom: 30px;
+
+    }
+    img {
+        width: 50%;
+    }
+}
+
+// ************************* //
+// FUN FACTS STYLES
+// ************************* //
+
+.funFact {
+
+    padding-bottom: 100px;
+    p {
+        font-family: $headingFont;
+        font-size: calc(2rem + 2vw);
+        text-align: center;
+        color: $highlight;
+    }
+}
+
+// ************************* //
+// FOOTER STYLES
+// ************************* //
+
+footer {
+    background: $highlight;
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+    color: #fff;
+    padding: 15px 0 5px 0;
+
+    a:hover,
+    a:focus {
+        font-weight: bold;
+    }
 }
