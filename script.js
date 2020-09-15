@@ -35,7 +35,7 @@ const babies = {
             alt: '7 month old baby boy making a funny face'
         },
         {
-            name: 'Grandma',
+            name: 'Abuelita',
             url: 'assets/grandma.jpg',
             about: 'Will not move unless she watched a CSI episode',
             alt: 'portrait of a grandmother smiling'
@@ -57,7 +57,9 @@ $('input[type="radio"]').on('change', function() {
     $('input[type="submit"]').prop('disabled', false);
 });
 
+
 // Create an event listener for a 'submit' event in the form
+// Prevent default bahaviour from the form
 $('form').on('submit', function (e) {
     e.preventDefault();
 
@@ -81,13 +83,6 @@ $('form').on('submit', function (e) {
     }
     
 });
-
-// Reset radio buttons/allow user to start again
-// $('.reStart').on('click', function (e) {
-//     e.preventDefault();
-//     location.reload(true);
-
-// }
 
 
 // Create init function that will kick off the app:
